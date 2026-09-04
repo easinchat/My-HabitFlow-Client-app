@@ -7,18 +7,27 @@ const Navbar = () => {
   const link = (
     <>
       <li>
-        <NavLink to={"/"}> Home</NavLink>
+        <NavLink className="nav-link" to={"/"}>
+          {" "}
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to={"/habits"}>Habits</NavLink>
+        <NavLink className="nav-link" to={"/habits"}>
+          Habits
+        </NavLink>
       </li>
       {user && (
         <>
           <li>
-            <NavLink to={"/yourHabits"}>Your Habits</NavLink>
+            <NavLink className="nav-link" to={"/yourHabits"}>
+              Your Habits
+            </NavLink>
           </li>
           <li>
-            <NavLink to={"/dashboard"}>Dashboard </NavLink>
+            <NavLink className="nav-link" to={"/dashboard"}>
+              Dashboard{" "}
+            </NavLink>
           </li>
         </>
       )}

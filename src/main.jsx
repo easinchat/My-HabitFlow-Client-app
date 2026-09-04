@@ -40,14 +40,16 @@ const router = createBrowserRouter([
 
       {
         path: "/dashboard",
+        loader: () =>
+          fetch(`https://my-habit-flow-server.vercel.app/habits`).then((res) =>
+            res.json(),
+          ),
+
         element: <Dashboard></Dashboard>,
       },
       {
         path: "/habitDetails/:id",
-        loader: ({ params }) =>
-          fetch(
-            `https://my-habit-flow-server.vercel.app/habits/${params.id}`,
-          ).then((res) => res.json()),
+
         element: <HabitDetails></HabitDetails>,
       },
       {
