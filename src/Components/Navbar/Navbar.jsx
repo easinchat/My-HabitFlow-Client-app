@@ -14,7 +14,7 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink className="nav-link" to={"/habits"}>
-          Habits
+          Public Habits
         </NavLink>
       </li>
       {user && (
@@ -65,18 +65,27 @@ const Navbar = () => {
             {link}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <NavLink
+          to={"/"}
+          className="font-bold text-xl md:text-3xl leading-tight"
+        >
+          HabitFLow
+        </NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{link}</ul>
       </div>
       <div className="navbar-end">
         {user ? (
-          <NavLink onClick={handleLogout} to={"/register"} className="btn">
+          <NavLink
+            onClick={handleLogout}
+            to={"/register"}
+            className="btn btn-primary"
+          >
             LogOut
           </NavLink>
         ) : (
-          <NavLink to={"/register"} className="btn">
+          <NavLink to={"/register"} className="btn btn-primary ">
             Register
           </NavLink>
         )}

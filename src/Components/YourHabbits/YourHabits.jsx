@@ -18,11 +18,14 @@ const YourHabits = () => {
 
   // console.log(yourHabits);
   return (
-    <div className=" ">
-      <NavLink to={"/createHabits"} className="btn btn-primary  ">
+    <div className="">
+      <NavLink
+        to={"/createHabits"}
+        className="btn btn-primary mt-5 p-7 flex w-7/12 mx-auto "
+      >
         Create Your Own Habbit
       </NavLink>
-      <div className="grid grid-cols-3 gap-5 mt-20">
+      <div className="grid grid-cols-3 gap-5 mt-20 w-11/12 max-w-7xl mx-auto">
         {yourHabits.map((yourHabit) => (
           <YourHabitCards
             key={yourHabit._id}

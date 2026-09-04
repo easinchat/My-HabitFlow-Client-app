@@ -16,15 +16,8 @@ const YourHabitCards = ({ yourHabit }) => {
       </span>
 
       <div className="mt-5 flex justify-between">
-        <NavLink
-          to={`/habitDetails/${_id}`}
-          className="rounded-lg bg-green-600 px-4 py-2 text-white"
-        >
-          View Details
-        </NavLink>
-        <NavLink className="rounded-lg bg-green-600 px-4 py-2 text-white">
-          Choose For You
-        </NavLink>
+        <NavLink className="btn btn-primary">View Details</NavLink>
+        <NavLink className="btn btn-primary">Choose For You</NavLink>
       </div>
     </div>
   );
